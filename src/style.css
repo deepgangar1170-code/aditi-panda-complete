@@ -29,3 +29,10 @@
 .polaroid img{display:block;width:100%;height:300px;object-fit:contain;object-position:center;background:#f7e9ef;border-radius:3px}
 .polaroid input{font-size:13px;font-weight:600}
 @media(max-width:550px){.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.polaroid{padding:7px 7px 10px}.polaroid img{height:245px}.polaroid input{font-size:11px}}
+
+/* Every photo stays fully visible, with no forced cropping. */
+.photos{grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:18px;align-items:start}
+.polaroid img{width:100%;height:310px;object-fit:contain;object-position:center;background:#f7edf0}
+.polaroid{overflow:hidden}
+.polaroid input{width:100%;min-width:0}
+@media(max-width:560px){.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.polaroid img{height:230px}}
