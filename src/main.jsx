@@ -173,7 +173,7 @@ function App(){
  <section className="section pink"><p className="eyebrow">THE OFFICIAL DOCUMENT</p><h2>Girlfriend Terms & Conditions 📜</h2><div className="terms"><p>By being the cutest PANDA ever, you agree that:</p><ol><li>Hugs may be requested at any time and are highly encouraged.</li><li>You are entitled to unlimited compliments and forehead kisses.</li><li>Stealing my food is allowed, but sharing yours is also appreciated.</li><li>You must keep smiling — but on difficult days, I'll help you find a reason.</li><li>You are permanently my favourite person. No cancellation policy applies.</li></ol><b>Signed with love, your biggest fan. ❤️</b></div></section>
  <section className="section panda"><div className="panda-emoji">🐼</div><p className="eyebrow">THE PANDA ZONE</p><h2>Certified cutie. Officially loved.</h2><p>Warning: excessive cuteness may cause spontaneous smiling, random hugs, and a severe case of missing you.</p></section>
  <section className="section" id="quiz"><p className="eyebrow">A LITTLE TEST</p><h2>How well do you know us? 💑</h2><p className="lead">No pressure. But I am absolutely keeping score. 😂</p><div className="quiz"><p className="quiz-progress">15 little questions, just for fun 💗</p>{quiz.map((q,i)=><div className="q" key={q.q}><h3>{i+1}. {q.q}</h3><div className="options">{q.a.map((a,j)=><button className={answers[i]===String(j)?"chosen":""} key={a} onClick={()=>{setAnswers({...answers,[i]:String(j)});setQuizDone(false)}}>{a}</button>)}</div></div>)}<button className="btn" disabled={Object.keys(answers).length!==quiz.length} onClick={()=>setQuizDone(true)}>Finish our little quiz 💞</button>
-</section>
+</div></section>
    {quizDone && (
   <div className="result">
     <h2>🐼 OFFICIAL PANDA EXAMINATION RESULT 👑</h2>
