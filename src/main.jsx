@@ -11,22 +11,83 @@ const letters = [
 ["When you need love","You are precious, beautiful, important, and deeply loved. Not because of what you do, but simply because you're you. ❤️"]
 ];
 const reasons = ["Your smile can turn an ordinary day into my favourite day.","The way you care, even about the smallest things.","Your laugh — especially when you laugh at your own jokes.","You make even boring moments feel special.","Your strength, kindness, and beautiful heart.","Because being your person is my favourite feeling."];
+
 const quiz = [
-{q:"What nickname do I lovingly use for you?",a:["PANDA 🐼","Sunshine ☀️","Princess 👑"],c:0},
-{q:"When does our birthday date begin?",a:["1:00 PM","3:00 PM","6:00 PM"],c:1},
-{q:"Where are we going for lunch on our date?",a:["Chili's 🍽️","A pizza place 🍕","A coffee shop ☕"],c:0},
-{q:"What is the best part of our date?",a:["The food","The pictures","Spending time together ❤️"],c:2},
-{q:"Who deserves all the birthday pampering?",a:["PANDA","PANDA, obviously 😂","Still PANDA 🐼"],c:1},
-{q:"What should we collect more of together?",a:["Beautiful memories","Silly selfies","Both of these 💗"],c:2},
-{q:"What's my favourite kind of message from you?",a:["A random good morning","A cute I miss you","Anything from you ❤️"],c:2},
-{q:"If we had a free day together, what would I choose?",a:["A little adventure","A cosy day together","Anything, as long as we're together"],c:2},
-{q:"What should never be missing from our relationship?",a:["Laughter","Honesty","Love and all of the above"],c:2},
-{q:"Who is the birthday star today?",a:["Me","PANDA 🌷","The cake 🎂"],c:1},
-{q:"What's better than a perfect plan?",a:["A spontaneous moment together","A long shopping list","A cancelled plan"],c:0},
-{q:"What should we do after lunch if we feel like it?",a:["Take cute pictures","Go for a little walk","Whatever makes us happy"],c:2},
-{q:"What's my favourite view?",a:["A sunset","A beautiful place","Your smile 😊"],c:2},
-{q:"What do I wish for your new year?",a:["More happiness","More success","All the happiness you deserve 💞"],c:2},
-{q:"And finally, how much are you loved?",a:["A little","A lot","More than words can explain ❤️"],c:2}
+  {
+    q: "Where did our love story begin before HR could investigate? 👀",
+    a: ["College canteen", "Office", "Dating app"],
+    c: 1
+  },
+  {
+    q: "Where did our first conversations start getting interesting? 😏",
+    a: ["At a party", "On a train", "In office"],
+    c: 2
+  },
+  {
+    q: "Which memory deserves a VIP pass to my heart? 💕",
+    a: ["Our first outing together", "An office meeting", "A shopping trip"],
+    c: 0
+  },
+  {
+    q: "What food can bribe Madam Panda into smiling? 🥟",
+    a: ["Pizza", "Momos", "Pasta"],
+    c: 1
+  },
+  {
+    q: "What's Madam Bhandupwali's favourite colour? 💗",
+    a: ["Blue", "Pink", "Black"],
+    c: 1
+  },
+  {
+    q: "What does Panda say when my flirting gets out of hand? 😈",
+    a: ["Please maintain distance", "Zyada hora hai!", "Send an email"],
+    c: 1
+  },
+  {
+    q: "Who falls asleep first, even when romance is in the air? 😴",
+    a: ["Me", "PANDA", "Neither of us"],
+    c: 1
+  },
+  {
+    q: "What's Panda's special talent when I'm around? 😂",
+    a: ["Getting irritated by me", "Writing poetry", "Solving puzzles"],
+    c: 0
+  },
+  {
+    q: "Which nickname makes her the queen of my heart? 👑",
+    a: ["Miss Corporate", "Bhandupwali", "Drama Minister"],
+    c: 1
+  },
+  {
+    q: "Which kiss makes Panda's romantic syllabus extra spicy? 💋🔥",
+    a: ["Forehead kiss", "Flying kiss", "Neck kiss"],
+    c: 2
+  },
+  {
+    q: "What's my favourite birthday girl's animal alter ego? 🐼",
+    a: ["PANDA", "Penguin", "Koala"],
+    c: 0
+  },
+  {
+    q: "When does our birthday-date mischief officially begin? 😏",
+    a: ["5:00 PM", "3:00 PM", "8:00 PM"],
+    c: 1
+  },
+  {
+    q: "Where are we going for our birthday lunch date? 🌶️❤️",
+    a: ["Chili's", "A coffee shop", "Office canteen"],
+    c: 0
+  },
+  {
+    q: "Which of these is NOT one of my special nicknames for her? 😜",
+    a: ["Bhandupwali", "PANDA", "Miss Spreadsheet"],
+    c: 2
+  },
+  {
+    q: "What's Panda's ultimate happiness combo? 😈💗",
+    a: ["Blue and pizza", "Pink and momos", "Green and pasta"],
+    c: 1
+  }
 ];
 
 const birthdayPhotos = [
@@ -111,7 +172,48 @@ function App(){
  <section className="section"><p className="eyebrow">A FEW OF A MILLION</p><h2>Reasons you're my favourite ❤️</h2><div className="grid reasons">{reasons.map((r,i)=><div className="reason" key={r}><b>0{i+1}</b><p>{r}</p></div>)}</div></section>
  <section className="section pink"><p className="eyebrow">THE OFFICIAL DOCUMENT</p><h2>Girlfriend Terms & Conditions 📜</h2><div className="terms"><p>By being the cutest PANDA ever, you agree that:</p><ol><li>Hugs may be requested at any time and are highly encouraged.</li><li>You are entitled to unlimited compliments and forehead kisses.</li><li>Stealing my food is allowed, but sharing yours is also appreciated.</li><li>You must keep smiling — but on difficult days, I'll help you find a reason.</li><li>You are permanently my favourite person. No cancellation policy applies.</li></ol><b>Signed with love, your biggest fan. ❤️</b></div></section>
  <section className="section panda"><div className="panda-emoji">🐼</div><p className="eyebrow">THE PANDA ZONE</p><h2>Certified cutie. Officially loved.</h2><p>Warning: excessive cuteness may cause spontaneous smiling, random hugs, and a severe case of missing you.</p></section>
- <section className="section" id="quiz"><p className="eyebrow">A LITTLE TEST</p><h2>How well do you know us? 💑</h2><p className="lead">No pressure. But I am absolutely keeping score. 😂</p><div className="quiz"><p className="quiz-progress">15 little questions, just for fun 💗</p>{quiz.map((q,i)=><div className="q" key={q.q}><h3>{i+1}. {q.q}</h3><div className="options">{q.a.map((a,j)=><button className={answers[i]===String(j)?"chosen":""} key={a} onClick={()=>{setAnswers({...answers,[i]:String(j)});setQuizDone(false)}}>{a}</button>)}</div></div>)}<button className="btn" disabled={Object.keys(answers).length!==quiz.length} onClick={()=>setQuizDone(true)}>Finish our little quiz 💞</button>{quizDone&&<p className="result">You answered all 15! Every answer is a little memory in the making. You're still my favourite person. ❤️</p>}</div></section>
+ <section className="section" id="quiz"><p className="eyebrow">A LITTLE TEST</p><h2>How well do you know us? 💑</h2><p className="lead">No pressure. But I am absolutely keeping score. 😂</p><div className="quiz"><p className="quiz-progress">15 little questions, just for fun 💗</p>{quiz.map((q,i)=><div className="q" key={q.q}><h3>{i+1}. {q.q}</h3><div className="options">{q.a.map((a,j)=><button className={answers[i]===String(j)?"chosen":""} key={a} onClick={()=>{setAnswers({...answers,[i]:String(j)});setQuizDone(false)}}>{a}</button>)}</div></div>)}<button className="btn" disabled={Object.keys(answers).length!==quiz.length} onClick={()=>setQuizDone(true)}>Finish our little quiz 💞</button>{
+{quizDone && (
+  <div className="result">
+    <h2>🐼 OFFICIAL PANDA EXAMINATION RESULT 👑</h2>
+    <h3>{score}/15 — Madam Bhandupwali's Score! ❤️</h3>
+
+    <p>Exam khatam, ab asli baat suno... 😏</p>
+
+    <p>
+      Congratulations, my cutest headache! Whether you scored
+      15/15 or 0/15, you've already stolen my heart.
+      And unfortunately, there is no return policy! 😂❤️
+    </p>
+
+    <p>
+      From our first conversations in the office to our first
+      outing together, I never imagined you would become
+      someone this special to me.
+    </p>
+
+    <p>
+      I annoy you, you get irritated, you say "Zyada hora hai!"
+      and somehow I still find another reason to tease you. 😈
+    </p>
+
+    <p>
+      But behind all the stupid jokes and naughty flirting,
+      I genuinely love making you smile.
+      You're my favourite Panda, my favourite Bhandupwali,
+      and someone I want to make a thousand more memories with. 💗
+    </p>
+
+    <p>
+      Your punishment for completing this exam?
+      Unlimited hugs, extra pampering, and a lifetime
+      subscription to my nonsense. No cancellations! 😘
+    </p>
+
+    <h3>Happy Birthday, my Panda! 🎂❤️</h3>
+  </div>
+)}
+quizDone&&<p className="result">Panda Exam completed! Your score is displayed above. But remember, Madam Bhandupwali, you've already won my heart! 😘❤️</p>}</div></section>
  <section className="section cake-section" id="cake"><p className="eyebrow">MAKE A WISH</p><h2>Your birthday cake 🎂</h2><p className="lead">Close your eyes, make a wish, and tap the candles.</p><div className="cake"><div className="candles">{[1,2,3].map(n=><span className="candle" key={n}>{!candlesOut&&<i/>}</span>)}</div><div className="cake-top"></div><div className="cake-body">♡</div><div className="plate"></div></div><button className="btn" onClick={()=>setCandlesOut(!candlesOut)}>{candlesOut?"Light the candles again ✨":"Blow out the candles 🌬️"}</button>{candlesOut&&<p className="result">Wish sent to the universe. May this year be as beautiful as you. 💫</p>}</section>
  <section className="section pink"><p className="eyebrow">A LITTLE BACKGROUND MAGIC</p><h2>Our song 🎵</h2><p className="lead">A gentle little melody made just for you. Tap play to listen while you explore — or choose another song of your own.</p><label className="btn light">Change the song<input type="file" accept="audio/*" onChange={e=>{const f=e.target.files?.[0];if(f){if(music.startsWith("blob:"))URL.revokeObjectURL(music);setMusic(URL.createObjectURL(f));setMusicName(f.name)}}}/></label>{music&&<div className="music"><p>🎶 {musicName}</p><audio controls loop preload="metadata" src={music}/></div>}</section>
  <section className="section birthday-letter-section"><p className="eyebrow">FROM MY HEART</p><h2>A birthday letter for you 💗</h2><p>On your special day, I just want you to know how grateful I am that you are in my life. I hope this year brings you peace when you need it, courage when things feel difficult, laughter in the ordinary moments, and beautiful surprises when you least expect them. Keep dreaming big, keep being your wonderfully silly self, and never forget how special you are to me. Happy Birthday, Aditi. I hope I get to celebrate countless more with you. ❤️</p><button className="btn light" onClick={()=>setBirthdayLetter(!birthdayLetter)}>{birthdayLetter?"Close letter":"Read this again ♡"}</button>{birthdayLetter&&<p className="letter-signoff">All my love, always. ♡</p>}</section>
