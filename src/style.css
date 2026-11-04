@@ -3,3 +3,15 @@
 @media(max-width:700px){header{padding:0 5%;height:60px}nav{gap:12px}nav a{font-size:11px}.section{padding:65px 6%}.letters,.reasons{grid-template-columns:repeat(2,1fr)}.terms{padding:22px}.modal{padding:34px 22px}.timeline-item{gap:14px}}@media(max-width:420px){nav a:nth-child(2){display:none}.letters,.reasons{grid-template-columns:1fr}.quiz{padding:18px}.options{flex-direction:column}.options button{text-align:left}}
 
 .gift-box{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;margin:25px auto;transition:.25s}.gift-box:hover{transform:scale(1.06)}.gift-lid{font-size:42px;line-height:1}.gift-body{font-size:82px;line-height:1.2}.gift-box.opened .gift-lid{transform:rotate(-18deg) translateY(-10px)}.gift-message,.letter-signoff{color:#b45e83;font-weight:700;line-height:1.8}.birthday-letter-section{max-width:850px}.birthday-letter-section>p:not(.eyebrow){max-width:720px;margin:0 auto 24px;line-height:1.9;color:#896a7a}
+/* Photo gallery improvements */
+.upload{border:2px dashed #d99bb5;background:linear-gradient(145deg,#fffafd,#fff0f6);transition:.2s}
+.upload:focus-within,.upload:hover{border-color:#bd648b;box-shadow:0 12px 30px #bd648b18}
+.photo-tip,.photo-count,.quiz-progress{font-size:13px;color:#a1768b!important;margin:16px auto!important}
+.photos{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px}
+.polaroid{border-radius:12px;padding:12px 12px 8px;transform:rotate(-1deg);transition:transform .2s,box-shadow .2s;overflow:hidden}
+.polaroid:nth-child(even){transform:rotate(1deg)}.polaroid:hover{transform:translateY(-4px) rotate(0);box-shadow:0 12px 28px #6f3e5030}
+.polaroid img{height:220px;object-fit:contain;background:#fff4f8;border-radius:6px}
+.polaroid input{font:500 13px 'DM Sans',sans-serif;background:#fff;padding:12px 4px;outline:none;border-bottom:1px solid #f0d6e1}
+.polaroid button{cursor:pointer;padding:8px 12px;border-radius:20px;background:#fff0f6}
+.quiz-progress{text-align:center;font-weight:700}
+@media(max-width:520px){.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.polaroid{padding:7px}.polaroid img{height:155px}}
