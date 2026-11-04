@@ -19,3 +19,13 @@
 
 /* Birthday date schedule shown after PANDA says yes */
 .date-schedule{margin:22px auto 8px;padding:24px 22px;max-width:430px;border:1px solid #f0cada;border-radius:20px;background:linear-gradient(145deg,#fff5f8,#fffafd);text-align:left;box-shadow:0 10px 28px #bd648b12}.date-schedule h3{font:600 27px 'Playfair Display',serif;color:#70445a;text-align:center;margin:0 0 20px}.date-schedule .eyebrow{text-align:center;margin-bottom:10px}.schedule-row{display:flex;align-items:flex-start;gap:14px;padding:13px 4px;border-bottom:1px solid #f2dce5}.schedule-row>span{font-size:25px}.schedule-row b,.schedule-row small{display:block}.schedule-row b{color:#a84e75;margin:2px 0 5px}.schedule-row small{color:#896a7a;line-height:1.6}.schedule-note{text-align:center!important;color:#b45e83!important;font:italic 17px 'Playfair Display',serif!important;margin:18px 0 0!important}
+
+/* Birthday scrapbook: display entire photos without cropping faces */
+.photos{grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:22px;align-items:start}
+.polaroid{border-radius:8px;padding:10px 10px 14px;box-shadow:0 9px 26px rgba(111,62,80,.16);transform:rotate(-1deg);transition:transform .25s ease,box-shadow .25s ease}
+.polaroid:nth-child(3n+2){transform:rotate(1.5deg)}
+.polaroid:nth-child(4n+3){transform:rotate(-1.8deg)}
+.polaroid:hover{transform:rotate(0deg) translateY(-5px);box-shadow:0 14px 32px rgba(111,62,80,.22)}
+.polaroid img{display:block;width:100%;height:300px;object-fit:contain;object-position:center;background:#f7e9ef;border-radius:3px}
+.polaroid input{font-size:13px;font-weight:600}
+@media(max-width:550px){.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.polaroid{padding:7px 7px 10px}.polaroid img{height:245px}.polaroid input{font-size:11px}}
