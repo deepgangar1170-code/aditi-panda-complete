@@ -15,3 +15,7 @@
 .polaroid button{cursor:pointer;padding:8px 12px;border-radius:20px;background:#fff0f6}
 .quiz-progress{text-align:center;font-weight:700}
 @media(max-width:520px){.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.polaroid{padding:7px}.polaroid img{height:155px}}
+
+
+/* Birthday date schedule shown after PANDA says yes */
+.date-schedule{margin:22px auto 8px;padding:24px 22px;max-width:430px;border:1px solid #f0cada;border-radius:20px;background:linear-gradient(145deg,#fff5f8,#fffafd);text-align:left;box-shadow:0 10px 28px #bd648b12}.date-schedule h3{font:600 27px 'Playfair Display',serif;color:#70445a;text-align:center;margin:0 0 20px}.date-schedule .eyebrow{text-align:center;margin-bottom:10px}.schedule-row{display:flex;align-items:flex-start;gap:14px;padding:13px 4px;border-bottom:1px solid #f2dce5}.schedule-row>span{font-size:25px}.schedule-row b,.schedule-row small{display:block}.schedule-row b{color:#a84e75;margin:2px 0 5px}.schedule-row small{color:#896a7a;line-height:1.6}.schedule-note{text-align:center!important;color:#b45e83!important;font:italic 17px 'Playfair Display',serif!important;margin:18px 0 0!important}
