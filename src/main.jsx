@@ -29,10 +29,29 @@ const quiz = [
 {q:"And finally, how much are you loved?",a:["A little","A lot","More than words can explain ❤️"],c:2}
 ];
 
+const birthdayPhotos = [
+  {id:"birthday-1",url:"/aditi-panda-complete/photos/memory-01.webp",name:"The smile I adore 🌷"},
+  {id:"birthday-2",url:"/aditi-panda-complete/photos/memory-02.webp",name:"My pretty Panda 🐼"},
+  {id:"birthday-3",url:"/aditi-panda-complete/photos/memory-03.webp",name:"Just being you 💗"},
+  {id:"birthday-4",url:"/aditi-panda-complete/photos/memory-04.webp",name:"Little moments, big smiles"},
+  {id:"birthday-5",url:"/aditi-panda-complete/photos/memory-05.webp",name:"Birthday girl energy ✨"},
+  {id:"birthday-6",url:"/aditi-panda-complete/photos/memory-06.webp",name:"Us, and a little magic"},
+  {id:"birthday-7",url:"/aditi-panda-complete/photos/memory-07.webp",name:"My favourite company"},
+  {id:"birthday-8",url:"/aditi-panda-complete/photos/memory-08.webp",name:"A memory worth keeping"},
+  {id:"birthday-9",url:"/aditi-panda-complete/photos/memory-09.webp",name:"Cutest kind of together"},
+  {id:"birthday-10",url:"/aditi-panda-complete/photos/memory-10.webp",name:"All the heart eyes 💕"},
+  {id:"birthday-11",url:"/aditi-panda-complete/photos/memory-11.webp",name:"Our happy place"},
+  {id:"birthday-12",url:"/aditi-panda-complete/photos/memory-12.webp",name:"A little closer, always"},
+  {id:"birthday-13",url:"/aditi-panda-complete/photos/memory-13.webp",name:"You + me = ❤️"},
+  {id:"birthday-14",url:"/aditi-panda-complete/photos/memory-14.webp",name:"One more lovely memory"},
+  {id:"birthday-15",url:"/aditi-panda-complete/photos/memory-15.webp",name:"Every moment counts"},
+  {id:"birthday-16",url:"/aditi-panda-complete/photos/memory-16.webp",name:"Even miles can’t stop a smile"}
+];
+
 function App(){
  const [letter,setLetter]=useState(null),[dateOpen,setDateOpen]=useState(false),[answer,setAnswer]=useState(""),[celebrate,setCelebrate]=useState(false),[giftOpen,setGiftOpen]=useState(false),[birthdayLetter,setBirthdayLetter]=useState(false);
  const [candlesOut,setCandlesOut]=useState(false),[answers,setAnswers]=useState({}),[quizDone,setQuizDone]=useState(false);
- const [photos,setPhotos]=useState([]),[captions,setCaptions]=useState({}),[music,setMusic]=useState(""),[musicName,setMusicName]=useState("");
+ const [photos,setPhotos]=useState(birthdayPhotos),[captions,setCaptions]=useState({}),[music,setMusic]=useState(""),[musicName,setMusicName]=useState("");
  const addPhotos=async files=>{const chosen=Array.from(files||[]);const valid=chosen.filter(f=>["image/jpeg","image/png","image/webp"].includes(f.type));if(valid.length!==chosen.length)alert("For the best compatibility, please choose JPG, PNG or WEBP photos. HEIC photos from some phones may need converting first.");const read= f=>new Promise(resolve=>{const reader=new FileReader();reader.onload=()=>resolve({id:Date.now()+"-"+Math.random().toString(16).slice(2),url:reader.result,name:f.name});reader.readAsDataURL(f);});const items=await Promise.all(valid.map(read));setPhotos(old=>[...old,...items]);};
  const handlePhotoInput=e=>{addPhotos(e.target.files);e.target.value="";};
  const handlePhotoDrop=e=>{e.preventDefault();addPhotos(e.dataTransfer.files);};
@@ -45,7 +64,7 @@ function App(){
  <section className="section"><p className="eyebrow">A NOTE BEFORE YOU EXPLORE</p><h2>For my favourite human</h2><p>Another year of you being amazing. I hope this little corner of the internet makes you smile as much as you make me smile. Explore everything — there are tiny surprises waiting for you. 💗</p></section>
  <section className="section" id="memories"><p className="eyebrow">CHAPTERS OF US</p><h2>Our Memory Lane 🛤️</h2><p className="lead">Every little moment is a page in my favourite story.</p><div className="timeline">
  {["The beginning ✨|The day our story started becoming something special. A beginning I'll always be grateful for.","Our silly moments 😂|Inside jokes, random conversations, teasing, laughter — the little things that became our thing.","Growing together 🌷|Learning, understanding, supporting, and choosing each other through every kind of day.","So many more to come 💞|This is nowhere near the last chapter. I can't wait for all the memories still waiting for us."].map((s,i)=><div className="timeline-item" key={s}><b>0{i+1}</b><div><h3>{s.split("|")[0]}</h3><p>{s.split("|")[1]}</p></div></div>)}
- </div><div className="upload" onDragOver={e=>e.preventDefault()} onDrop={handlePhotoDrop}><h3>📸 Our little photo gallery</h3><p>Choose multiple clear photos, or drag and drop them here. JPG, PNG and WEBP work best.</p><label className="btn light">＋ Choose photos<input type="file" accept="image/jpeg,image/png,image/webp" multiple onChange={handlePhotoInput}/></label><p className="photo-tip">Tip: select several photos at once. Use landscape or portrait pictures — they'll be neatly cropped into photo cards.</p>{photos.length>0&&<p className="photo-count">{photos.length} lovely {photos.length===1?"memory":"memories"} added 💗</p>}{photos.length>0&&<div className="photos">{photos.map(p=><div className="polaroid" key={p.id}><img src={p.url} alt={p.name}/><input value={captions[p.id]??p.name.replace(/\.[^.]+$/,"")} onChange={e=>setCaptions({...captions,[p.id]:e.target.value})}/><button onClick={()=>setPhotos(old=>old.filter(x=>x.id!==p.id))}>Remove</button></div>)}</div>}</div></section>
+ </div><div className="upload" onDragOver={e=>e.preventDefault()} onDrop={handlePhotoDrop}><h3>📸 Our little photo gallery</h3><p>Our favourite memories, already here for you. 💗 You can also add more photos below.</p><label className="btn light">＋ Choose photos<input type="file" accept="image/jpeg,image/png,image/webp" multiple onChange={handlePhotoInput}/></label><p className="photo-tip">A little scrapbook of us, with more memories still to make. 🐼💕</p>{photos.length>0&&<p className="photo-count">{photos.length} lovely {photos.length===1?"memory":"memories"} added 💗</p>}{photos.length>0&&<div className="photos">{photos.map(p=><div className="polaroid" key={p.id}><img src={p.url} alt={p.name}/><input value={captions[p.id]??p.name.replace(/\.[^.]+$/,"")} onChange={e=>setCaptions({...captions,[p.id]:e.target.value})}/><button onClick={()=>setPhotos(old=>old.filter(x=>x.id!==p.id))}>Remove</button></div>)}</div>}</div></section>
  <section className="section pink" id="letters"><p className="eyebrow">OPEN WHEN YOU NEED IT</p><h2>Little letters for you 💌</h2><p className="lead">Choose one. It's written for that exact kind of day.</p><div className="grid letters">{letters.map(l=><button className="letter" key={l[0]} onClick={()=>setLetter(l)}><span>💌</span><strong>{l[0]}</strong><small>Tap to open ↗</small></button>)}</div></section>
  <section className="section"><p className="eyebrow">A FEW OF A MILLION</p><h2>Reasons you're my favourite ❤️</h2><div className="grid reasons">{reasons.map((r,i)=><div className="reason" key={r}><b>0{i+1}</b><p>{r}</p></div>)}</div></section>
  <section className="section pink"><p className="eyebrow">THE OFFICIAL DOCUMENT</p><h2>Girlfriend Terms & Conditions 📜</h2><div className="terms"><p>By being the cutest PANDA ever, you agree that:</p><ol><li>Hugs may be requested at any time and are highly encouraged.</li><li>You are entitled to unlimited compliments and forehead kisses.</li><li>Stealing my food is allowed, but sharing yours is also appreciated.</li><li>You must keep smiling — but on difficult days, I'll help you find a reason.</li><li>You are permanently my favourite person. No cancellation policy applies.</li></ol><b>Signed with love, your biggest fan. ❤️</b></div></section>
