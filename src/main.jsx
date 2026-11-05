@@ -155,7 +155,7 @@ function App(){
 const [surpriseOpened, setSurpriseOpened] = useState(false);
   const [letter,setLetter]=useState(null),[dateOpen,setDateOpen]=useState(false),[answer,setAnswer]=useState(""),[celebrate,setCelebrate]=useState(false),[giftOpen,setGiftOpen]=useState(false),[birthdayLetter,setBirthdayLetter]=useState(false);
  const [candlesOut,setCandlesOut]=useState(false),[answers,setAnswers]=useState({}),[quizDone,setQuizDone]=useState(false);
- const [photos,setPhotos]=useState(birthdayPhotos),[captions,setCaptions]=useState({}),[music,setMusic]=useState(import.meta.env.BASE_URL+"music/our-little-melody.wav"),[musicName,setMusicName]=useState("Our Little Melody — made just for Panda 💗");
+ const [photos,setPhotos]=useState(birthdayPhotos),[captions,setCaptions]=useState({}),[music,setMusic]=useState(import.meta.env.BASE_URL+"music/tum-ho-toh.mp3"),[musicName,setMusicName]=useState("Our Little Melody — made just for Panda 💗");
  const addPhotos=async files=>{const chosen=Array.from(files||[]);const valid=chosen.filter(f=>["image/jpeg","image/png","image/webp"].includes(f.type));if(valid.length!==chosen.length)alert("For the best compatibility, please choose JPG, PNG or WEBP photos. HEIC photos from some phones may need converting first.");const read= f=>new Promise(resolve=>{const reader=new FileReader();reader.onload=()=>resolve({id:Date.now()+"-"+Math.random().toString(16).slice(2),url:reader.result,name:f.name});reader.readAsDataURL(f);});const items=await Promise.all(valid.map(read));setPhotos(old=>[...old,...items]);};
  const handlePhotoInput=e=>{addPhotos(e.target.files);e.target.value="";};
  const handlePhotoDrop=e=>{e.preventDefault();addPhotos(e.dataTransfer.files);};
