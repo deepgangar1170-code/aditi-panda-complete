@@ -90,66 +90,7 @@ const quiz = [
   }
 ];
 
-const birthdayPhotos = [
-  {id:"birthday-2",url:import.meta.env.BASE_URL+"photos/memory-02.webp",name:"My pretty Panda 🐼"},
-  {id:"birthday-3",url:import.meta.env.BASE_URL+"photos/memory-03.webp",name:"Just being you 💗"},
-  {id:"birthday-4",url:import.meta.env.BASE_URL+"photos/memory-04.webp",name:"Little moments, big smiles"},
-  {id:"birthday-5",url:import.meta.env.BASE_URL+"photos/memory-05.webp",name:"Birthday girl energy ✨"},
-  {id:"birthday-6",url:import.meta.env.BASE_URL+"photos/memory-06.webp",name:"Us, and a little magic"},
-  {id:"birthday-7",url:import.meta.env.BASE_URL+"photos/memory-07.webp",name:"My favourite company"},
-  {id:"birthday-8",url:import.meta.env.BASE_URL+"photos/memory-08.webp",name:"A memory worth keeping"},
-  {id:"birthday-9",url:import.meta.env.BASE_URL+"photos/memory-09.webp",name:"Cutest kind of together"},
-  {id:"birthday-10",url:import.meta.env.BASE_URL+"photos/memory-10.webp",name:"All the heart eyes 💕"},
-  {id:"birthday-11",url:import.meta.env.BASE_URL+"photos/memory-11.webp",name:"Our happy place"},
-  {id:"birthday-12",url:import.meta.env.BASE_URL+"photos/memory-12.webp",name:"A little closer, always"},
-  {id:"birthday-13",url:import.meta.env.BASE_URL+"photos/memory-13.webp",name:"You + me = ❤️"},
-  {id:"birthday-14",url:import.meta.env.BASE_URL+"photos/memory-14.webp",name:"One more lovely memory"},
-  {id:"birthday-15",url:import.meta.env.BASE_URL+"photos/memory-15.webp",name:"Every moment counts"},
-  {id:"birthday-16",url:import.meta.env.BASE_URL+"photos/memory-16.webp",name:"Even miles can’t stop a smile"}
-,
-  {id:"birthday-17",url:import.meta.env.BASE_URL+"photos/memory-17.webp",name:"A moment to treasure 💗"},
-  {id:"birthday-18",url:import.meta.env.BASE_URL+"photos/memory-18.webp",name:"My favourite kind of magic 💗"},
-  {id:"birthday-19",url:import.meta.env.BASE_URL+"photos/memory-19.webp",name:"A little piece of our story 💗"},
-  {id:"birthday-20",url:import.meta.env.BASE_URL+"photos/memory-20.webp",name:"Another reason to smile 💗"},
-  {id:"birthday-21",url:import.meta.env.BASE_URL+"photos/memory-21.webp",name:"The sweetest memories 💗"},
-  {id:"birthday-22",url:import.meta.env.BASE_URL+"photos/memory-22.webp",name:"The days I want to remember 💗"},
-  {id:"birthday-23",url:import.meta.env.BASE_URL+"photos/memory-23.webp",name:"Always worth a thousand words 💗"},
-  {id:"birthday-24",url:import.meta.env.BASE_URL+"photos/memory-24.webp",name:"Little moments, endless love 💗"},
-  {id:"birthday-25",url:import.meta.env.BASE_URL+"photos/memory-25.webp",name:"A moment to treasure 💗"},
-  {id:"birthday-26",url:import.meta.env.BASE_URL+"photos/memory-26.webp",name:"My favourite kind of magic 💗"},
-  {id:"birthday-27",url:import.meta.env.BASE_URL+"photos/memory-27.webp",name:"A little piece of our story 💗"},
-  {id:"birthday-28",url:import.meta.env.BASE_URL+"photos/memory-28.webp",name:"Another reason to smile 💗"},
-  {id:"birthday-29",url:import.meta.env.BASE_URL+"photos/memory-29.webp",name:"The sweetest memories 💗"},
-  {id:"birthday-30",url:import.meta.env.BASE_URL+"photos/memory-30.webp",name:"The days I want to remember 💗"},
-  {id:"birthday-31",url:import.meta.env.BASE_URL+"photos/memory-31.webp",name:"Always worth a thousand words 💗"},
-  {id:"birthday-32",url:import.meta.env.BASE_URL+"photos/memory-32.webp",name:"Little moments, endless love 💗"},
-  {id:"birthday-33",url:import.meta.env.BASE_URL+"photos/memory-33.webp",name:"A moment to treasure 💗"},
-  {id:"birthday-34",url:import.meta.env.BASE_URL+"photos/memory-34.webp",name:"My favourite kind of magic 💗"},
-  {id:"birthday-35",url:import.meta.env.BASE_URL+"photos/memory-35.webp",name:"A little piece of our story 💗"},
-  {id:"birthday-36",url:import.meta.env.BASE_URL+"photos/memory-36.webp",name:"Another reason to smile 💗"},
-  {id:"birthday-37",url:import.meta.env.BASE_URL+"photos/memory-37.webp",name:"The sweetest memories 💗"},
-  {id:"birthday-38",url:import.meta.env.BASE_URL+"photos/memory-38.webp",name:"The days I want to remember 💗"},
-  {id:"birthday-39",url:import.meta.env.BASE_URL+"photos/memory-39.webp",name:"Always worth a thousand words 💗"},
-  {id:"birthday-40",url:import.meta.env.BASE_URL+"photos/memory-40.webp",name:"Little moments, endless love 💗"},
-  {id:"birthday-41",url:import.meta.env.BASE_URL+"photos/memory-41.webp",name:"A moment to treasure 💗"},
-  {id:"birthday-42",url:import.meta.env.BASE_URL+"photos/memory-42.webp",name:"My favourite kind of magic 💗"},
-  {id:"birthday-43",url:import.meta.env.BASE_URL+"photos/memory-43.webp",name:"A little piece of our story 💗"},
-  {id:"birthday-44",url:import.meta.env.BASE_URL+"photos/memory-44.webp",name:"Another reason to smile 💗"},
-  {id:"birthday-45",url:import.meta.env.BASE_URL+"photos/memory-45.webp",name:"The sweetest memories 💗"},
-  {id:"birthday-46",url:import.meta.env.BASE_URL+"photos/memory-46.webp",name:"The days I want to remember 💗"},
-  {id:"birthday-47",url:import.meta.env.BASE_URL+"photos/memory-47.webp",name:"Always worth a thousand words 💗"},
-  {id:"birthday-48",url:import.meta.env.BASE_URL+"photos/memory-48.webp",name:"Little moments, endless love 💗"},
-  {id:"birthday-49",url:import.meta.env.BASE_URL+"photos/memory-49.webp",name:"A moment to treasure 💗"},
-  {id:"birthday-50",url:import.meta.env.BASE_URL+"photos/memory-50.webp",name:"My favourite kind of magic 💗"},
-  {id:"birthday-51",url:import.meta.env.BASE_URL+"photos/memory-51.webp",name:"A little piece of our story 💗"},
-  {id:"birthday-52",url:import.meta.env.BASE_URL+"photos/memory-52.webp",name:"Another reason to smile 💗"},
-  {id:"birthday-53",url:import.meta.env.BASE_URL+"photos/memory-53.webp",name:"The sweetest memories 💗"},
-  {id:"birthday-54",url:import.meta.env.BASE_URL+"photos/memory-54.webp",name:"The days I want to remember 💗"},
-  {id:"birthday-55",url:import.meta.env.BASE_URL+"photos/memory-55.webp",name:"Always worth a thousand words 💗"},
-  {id:"birthday-56",url:import.meta.env.BASE_URL+"photos/memory-56.webp",name:"Little moments, endless love 💗"},
-  {id:"birthday-57",url:import.meta.env.BASE_URL+"photos/memory-57.webp",name:"A moment to treasure 💗"}
-];
-
+const birthdayPhotos = [];
 function App(){
 const [surpriseOpened, setSurpriseOpened] = useState(false);
   
