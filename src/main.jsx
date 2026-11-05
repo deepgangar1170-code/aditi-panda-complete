@@ -91,7 +91,6 @@ const quiz = [
 ];
 
 const birthdayPhotos = [
-  {id:"birthday-1",url:import.meta.env.BASE_URL+"photos/memory-01.webp",name:"The smile I adore 🌷"},
   {id:"birthday-2",url:import.meta.env.BASE_URL+"photos/memory-02.webp",name:"My pretty Panda 🐼"},
   {id:"birthday-3",url:import.meta.env.BASE_URL+"photos/memory-03.webp",name:"Just being you 💗"},
   {id:"birthday-4",url:import.meta.env.BASE_URL+"photos/memory-04.webp",name:"Little moments, big smiles"},
