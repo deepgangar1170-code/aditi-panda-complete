@@ -90,7 +90,43 @@ const quiz = [
   }
 ];
 
-const birthdayPhotos = [];
+
+const captions = [
+  "Panda, you're my favourite sunshine ☀️",
+  "The prettiest smile in my universe 🌷",
+  "A little sparkle, a lot of Aditi ✨",
+  "Certified queen of being adorable 👑",
+  "That smile deserves its own fan club 💗",
+  "My favourite kind of beautiful 🦋",
+  "A face that makes ordinary days magical 🌸",
+  "Too cute to be legal, Miss Panda 🐼",
+  "The girl who makes pink look prettier 🎀",
+  "One smile, a million butterflies 🥹",
+  "Our little chapter of happiness 📖",
+  "Two smiles, one unforgettable moment 💞",
+  "Some memories feel like home 🏡",
+  "The cutest plot twist of my life 💌",
+  "Us being effortlessly ridiculous 😂",
+  "Every adventure is sweeter with you 🍭",
+  "My favourite person to make memories with 🌻",
+  "A little chaos, a whole lot of love 💕",
+  "Proof that the best moments aren't planned 📸",
+  "Together is a lovely place to be 🌙",
+  "The kind of memory I replay in my head 🎞️",
+  "Our smiles tell the sweetest stories 🧸",
+  "Life looks a little brighter beside you 🌈",
+  "A moment I'd happily live twice 🫶",
+  "Just two cuties collecting memories 🐣",
+  "And somehow, every picture becomes special ❤️"
+];
+
+const birthdayPhotos = captions.map((name, index) => ({
+  id: `birthday-${index + 1}`,
+  url: import.meta.env.BASE_URL +
+    `photos/new-memories/memory-${String(index + 1).padStart(2, "0")}.webp`,
+  name
+}));
+
 function App(){
 const [surpriseOpened, setSurpriseOpened] = useState(false);
   
