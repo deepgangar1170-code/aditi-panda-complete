@@ -157,3 +157,18 @@
   resize: none;
   outline: none;
 }
+
+/* Aditi's final scrapbook look */
+.upload label.btn,
+.upload .polaroid button {
+  display: none !important;
+}
+
+.upload .polaroid textarea {
+  pointer-events: none;
+  resize: none;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  cursor: default;
+}
