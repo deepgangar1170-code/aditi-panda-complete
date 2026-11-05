@@ -137,3 +137,23 @@
   margin-top: 16px;
 }
 
+
+/* Cute multiline Polaroid captions */
+.polaroid textarea {
+  display: block;
+  width: 100%;
+  min-height: 72px;
+  box-sizing: border-box;
+  padding: 10px 8px;
+  border: none;
+  background: transparent;
+  color: #80516a;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  resize: none;
+  outline: none;
+}
